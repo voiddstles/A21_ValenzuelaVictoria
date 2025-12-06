@@ -31,6 +31,26 @@ public class PerfilesResource {
 
     private static List<ProfileDTO> baseDeDatos = new ArrayList<>(); //es la base de datos de los perfiles
 
+    static {
+        // Perfil 1
+        ProfileDTO p1 = new ProfileDTO("Juan", "Perez", "Mexico");
+        p1.setEdad(25);
+        p1.setGenero("M");
+        baseDeDatos.add(p1);
+
+        // Perfil 2
+        ProfileDTO p2 = new ProfileDTO("Maria", "Lopez", "Mexico");
+        p2.setEdad(22);
+        p2.setGenero("F");
+        baseDeDatos.add(p2);
+
+        // Perfil 3
+        ProfileDTO p3 = new ProfileDTO("John", "Doe", "USA");
+        p3.setEdad(30);
+        p3.setGenero("M");
+        baseDeDatos.add(p3);
+    }
+    
     @Context
     private UriInfo context;
 
